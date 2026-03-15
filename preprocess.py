@@ -43,7 +43,7 @@ def format_transcript(turns: list) -> str:
         content = clean_text(turn.get("content", ""))
         if content:
             lines.append(f"{speaker}: {content}")
-    return "\n".join(lines)
+    return " ".join(lines)
 
 
 json_files = sorted(RAW_DIR.glob("*.json"))  # Get all .json files in the raw directory
