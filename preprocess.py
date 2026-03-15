@@ -1,11 +1,16 @@
 import json  # To read json files
 import re  # Stands for - regular expressions, used for finding and removing patterns in text
-import os  # Let's python interact with your operating system, e.g. to read files from a folder
+
+# import os  # Let's python interact with your operating system, e.g. to read files from a folder
 from pathlib import Path  # to write file path
 
 
-RAW_DIR = Path("./data/raw/QMSum/data/ALL/val")
-OUT_DIR = Path("./data/preprocessed/val")
+RAW_DIRS = [
+    Path("./data/raw/QMSum/data/ALL/train"),
+    Path("./data/raw/QMSum/data/ALL/val"),
+    Path("./data/raw/QMSum/data/ALL/test"),
+]
+OUT_DIR = Path("./data/preprocessed")
 OUT_DIR.mkdir(exist_ok=True)  # Create the output directory if it doesn't exist
 
 
@@ -46,53 +51,57 @@ def format_transcript(turns: list) -> str:
     return " ".join(lines)
 
 
-json_files = sorted(RAW_DIR.glob("*.json"))  # Get all .json files in the raw directory
+all_meetings = {}
 
-if not json_files:
-    print(f"ERROR: No JSON files found in {RAW_DIR}")
-    print("Make sure you run this script from the thesis_project/ directory.")
-    exit(1)
+for RAW_DIR in RAW_DIRS:
+    json_files = sorted(
+        RAW_DIR.glob("*.json")
+    )  # Get all .json files in the raw directory
 
-domain_counts = {"Academic": 0, "Product": 0, "Committee": 0, "Unknown": 0}
-
-
-for fpath in json_files:
-    meeting_id = fpath.stem  # Get the filename without extension to use as meeting ID
-    # print(f"Processing meeting: {meeting_id}")
-
-    with open(fpath, "r", encoding="utf-8") as f:
-        raw = json.load(f)
-        # print(f"Raw json data loaded {raw}")
-
-    try:  # Extract the ground truth summary
-        ground_truth = raw["general_query_list"][0]["answer"].strip()
-    except (KeyError, IndexError):
-        print(f"  WARNING: No ground truth found for {meeting_id}, skipping.")
-        exit(1)
-    # print(f"Ground Truth:\n{ground_truth}\n")
-
-    # Process the transcript
-    turns = raw.get("meeting_transcripts", [])
-    # print(f"turns: {turns}")
-    if not turns:
-        print(f"  WARNING: Empty transcript for {meeting_id}, skipping.")
+    if not json_files:
+        print(f"ERROR: No JSON files found in {RAW_DIR}")
+        print("Make sure you run this script from the thesis_project/ directory.")
         exit(1)
 
-    transcript = format_transcript(turns)
-    domain = get_domain(meeting_id)
+    for fpath in json_files:
+        meeting_id = (
+            fpath.stem
+        )  # Get the filename without extension to use as meeting ID
+        # print(f"Processing meeting: {meeting_id}")
 
-    # print(f"Transcript:\n{transcript[:500]}...\n")
+        with open(fpath, "r", encoding="utf-8") as f:
+            raw = json.load(f)
+            # print(f"Raw json data loaded {raw}")
 
-    record = {
-        "meeting_id": meeting_id,
-        "domain": domain,
-        "transcript": transcript,
-        "ground_truth": ground_truth,
-        "word_count": len(transcript.split()),
-        "turn_count": len(turns),
-    }
+        try:  # Extract the ground truth summary
+            ground_truth = raw["general_query_list"][0]["answer"].strip()
+        except (KeyError, IndexError):
+            print(f"  WARNING: No ground truth found for {meeting_id}, skipping.")
+            exit(1)
+        # print(f"Ground Truth:\n{ground_truth}\n")
 
-    # Save individual clean file
-    out_path = OUT_DIR / f"{meeting_id}_clean.json"
-    with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(record, f, indent=2, ensure_ascii=False)
+        # Process the transcript
+        turns = raw.get("meeting_transcripts", [])
+        # print(f"turns: {turns}")
+        if not turns:
+            print(f"  WARNING: Empty transcript for {meeting_id}, skipping.")
+            exit(1)
+
+        transcript = format_transcript(turns)
+        domain = get_domain(meeting_id)
+
+        # print(f"Transcript:\n{transcript[:500]}...\n")
+
+        all_meetings[meeting_id] = {
+            "domain": domain,
+            "transcript": transcript,
+            "ground_truth": ground_truth,
+            "word_count": len(transcript.split()),
+            "turn_count": len(turns),
+        }
+
+# Save individual clean file
+out_path = OUT_DIR / "cleaned_meetings.json"
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(all_meetings, f, indent=2, ensure_ascii=False)
+print(f"Saved {len(all_meetings)} meetings to {out_path}")
