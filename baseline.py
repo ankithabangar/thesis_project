@@ -7,11 +7,9 @@ from langchain_core.prompts import ChatPromptTemplate
 
 
 INPUT_PATH = Path("./data/preprocessed/cleaned_meetings.json")
-OUTPUT_PATH = Path("./data/results/baseline_summaries.json")
+OUTPUT_PATH = Path(".results/llama3.1/baseline_summaries.json")
 
-
-with open(INPUT_PATH, "r", encoding="utf-8") as f:
-    cleaned_meetings = json.load(f)
+# TEST_IDS = ["ES2004a"]
 
 
 model = OllamaLLM(model="llama3.1:8b")
@@ -27,7 +25,7 @@ mentioned in this section.
 Important: Only include information that is explicitly stated in the transcript.
 Do not add, infer, or assume any details that are not directly mentioned.
  
-Write only the summary as a single paragraph. Do not include any preamble or explanation.
+Write only the summary as a single paragraph of no more than 30 words. Do not include any preamble or explanation.
  
 TRANSCRIPT SECTION ({chunk_index} of {total_chunks}):
 {chunk}
@@ -60,15 +58,8 @@ SECTION SUMMARIES:
 merge_prompt = ChatPromptTemplate.from_template(merge_template)
 merge_chain = merge_prompt | model
 
-results = {}
 
-test_ids = ["Bmr006"]
-meetings = cleaned_meetings.items()
-
-if test_ids:
-    meetings = [(mid, m) for mid, m in meetings if mid in test_ids]
-
-for meeting_id, meeting in meetings:
+def summarise_meeting(meeting_id: str, meeting: dict) -> str:
     chunks = meeting["chunks"]
     print(f"\n{'=' * 60}")
     print(f"Processing {meeting_id} — {len(chunks)} chunks")
@@ -97,21 +88,34 @@ for meeting_id, meeting in meetings:
     final_summary = merge_chain.invoke({"combined_summaries": combined}).strip()
 
     elapsed = time.time() - start_time
-    print(f"  Done in {elapsed:.1f} seconds.")
-    print(f"  Done. Summary length: {len(final_summary.split())} words")
+    print(
+        f"  Done in {elapsed:.1f}s ({elapsed / 60:.1f} min). Summary: {len(final_summary.split())} words"
+    )
 
-    results[meeting_id] = {
+    return {
         "meeting_id": meeting_id,
         "domain": meeting["domain"],
+        "transcript": meeting["transcript"],
+        "ground_truth": meeting["ground_truth"],
         "summary": final_summary,
         "chunk_summaries": chunk_summaries,
-        "ground_truth": meeting["ground_truth"],
     }
 
-OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+def main():
+    with open(INPUT_PATH, "r", encoding="utf-8") as f:
+        cleaned_meetings = json.load(f)
+
+    meetings = cleaned_meetings.items()
+
+    results = {mid: summarise_meeting(mid, m) for mid, m in meetings}
+
+    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
+        json.dump(results, f, indent=2, ensure_ascii=False)
+
+    print(f"\nSaved {len(results)} summaries to {OUTPUT_PATH}")
 
 
-with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-    json.dump(results, f, indent=2, ensure_ascii=False)
-
-print(f"\nSaved {len(results)} summaries to {OUTPUT_PATH}")
+if __name__ == "__main__":
+    main()

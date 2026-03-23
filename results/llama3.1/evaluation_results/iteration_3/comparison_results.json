@@ -1,0 +1,168 @@
+{
+  "ES2004a": {
+    "baseline": {
+      "rouge1": 0.4408,
+      "rouge2": 0.0988,
+      "rougeL": 0.1959,
+      "bertscore_precision": 0.8699,
+      "bertscore_recall": 0.8676,
+      "bertscore_f1": 0.8687,
+      "summac": 0.9981,
+      "minicheck_mean_prob": 0.2665,
+      "minicheck_supported_ratio": 0.2,
+      "minicheck_num_claims": 5,
+      "minicheck_sentence_scores": [
+        {
+          "sentence": "The meeting began with a discussion on the environment, including adjusting lighting for better visibility, before introducing the project plan and brainstorming ideas for a remote control that would be original, user-friendly, and appealing to a wide market.",
+          "label": 0,
+          "prob": 0.1233
+        },
+        {
+          "sentence": "The team settled on an eagle design after exploring various options, with a selling price of 25 Euros or approximately 17 Pounds.",
+          "label": 0,
+          "prob": 0.0876
+        },
+        {
+          "sentence": "Project Manager expressed concern about the product's affordability.",
+          "label": 1,
+          "prob": 0.9687
+        },
+        {
+          "sentence": "Later discussions centered around simplifying the remote control's design, integrating multiple functions into one device, and making it accessible to both tech-savvy individuals and those with limited technical knowledge.",
+          "label": 0,
+          "prob": 0.0777
+        },
+        {
+          "sentence": "The team also explored features such as buttons, menus, and a potential flip-top design, while considering cost-effective materials like plastic.",
+          "label": 0,
+          "prob": 0.075
+        }
+      ],
+      "summary_words": 117
+    },
+    "self_refine": {
+      "rouge1": 0.4769,
+      "rouge2": 0.1318,
+      "rougeL": 0.2462,
+      "bertscore_precision": 0.8725,
+      "bertscore_recall": 0.8807,
+      "bertscore_f1": 0.8766,
+      "summac": 0.9999,
+      "minicheck_mean_prob": 0.1796,
+      "minicheck_supported_ratio": 0.0,
+      "minicheck_num_claims": 5,
+      "minicheck_sentence_scores": [
+        {
+          "sentence": "The project plan for developing an original remote control aims to create a trendy, appealing product that is accessible internationally and usable across all age groups.",
+          "label": 0,
+          "prob": 0.3803
+        },
+        {
+          "sentence": "During the initial introduction of the project, the team practiced drawing their favourite animals on a whiteboard as an icebreaker exercise.",
+          "label": 0,
+          "prob": 0.0564
+        },
+        {
+          "sentence": "The marketing concept was discussed, with the eagle design chosen from several options, and a price point of approximately 17 Pounds (1.4 Euros) established, alongside production costs of around 12.50 Euros.",
+          "label": 0,
+          "prob": 0.0505
+        },
+        {
+          "sentence": "To simplify user experience, the team considered integrating basic functions into one device and creating an intuitive interface, including an option for large print display, to accommodate older generations.",
+          "label": 0,
+          "prob": 0.3162
+        },
+        {
+          "sentence": "Design features such as buttons, menus, and a flip-top remote control were also discussed, with a suggestion to use lightweight plastic due to ease of moulding and production.",
+          "label": 0,
+          "prob": 0.0946
+        }
+      ],
+      "summary_words": 135
+    },
+    "delta": {
+      "rouge1": 0.0361,
+      "rouge2": 0.033,
+      "rougeL": 0.0503,
+      "bertscore_f1": 0.0079,
+      "summac": 0.0018,
+      "minicheck_mean_prob": -0.0869,
+      "minicheck_supported_ratio": -0.2
+    },
+    "self_refine_metadata": {
+      "total_iterations": 3,
+      "stopped_reason": "max_iterations",
+      "iterations": [
+        {
+          "iteration": 1,
+          "chunk_summaries_before": [
+            "The meeting started with a discussion on the environment, including dimming lights for better visibility. The project plan was then introduced, and the development of a remote control was discussed, aiming to be original, user-friendly, and appealing to a wide market. The team practiced brainstorming and design thinking by drawing their favourite animals on a whiteboard, with varying results, before moving forward with conceptualising the product's features.",
+            "The team discussed a marketing concept, which was being drawn on a pen by Marketing, but was repeatedly coming apart. They decided against creating a seagull design and settled on an eagle instead. The selling price of the product is 25 Euros or approximately 17 Pounds. Project Manager noted that this may be expensive for customers.",
+            "The group discussed simplifying remote control design, integrating multiple functions into one device, and making it user-friendly for both tech-savvy individuals and those with limited technical knowledge.",
+            "The discussion focused on the design of a remote control, including features such as buttons, menus, and possibly a flip-top remote control. Cost implications were considered, with plastic being suggested as a cost-effective material."
+          ],
+          "chunk_feedback": [
+            "ISSUE [1]: The meeting started with a discussion on the environment, including dimming lights for better visibility.\nREASON: There was no discussion about the environment or dimming lights; it was simply Project Manager asking if they could dim the lights to improve visibility.\n\nISSUE [2]: The project plan was then introduced, and the development of a remote control was discussed, aiming to be original, user-friendly, and appealing to a wide market.\nREASON: While this is generally true, there was no specific mention that the remote control should appeal to \"grannies to kids, maybe even pooches\"; the transcript says it should be appealing to a \"wide market\" without specifying demographics.\n\nISSUE [3]: The team practiced brainstorming and design thinking by drawing their favourite animals on a whiteboard, with varying results.\nREASON: While this is true, there was no mention of the results being \"varied\"; in fact, Marketing complimented the quality of the drawings.",
+            "After reviewing the summary, I have identified some factual errors:\n\nISSUE [1]: The team decided against creating a big cat design.\nREASON: The transcript states that Marketing mentioned a big cat, but then immediately said \"I was gonna do a big cat too, um\" and continued with other ideas. It's not clear if the big cat was ever considered seriously or rejected.\n\nISSUE [2]: They settled on an eagle instead of a seagull because it looked like what they wanted.\nREASON: The transcript actually states that Marketing thought both eagles and seagulls were flying animals, but they decided to go with an eagle.\n\nISSUE [3]: Project Manager noted that the 25 Euros selling price was too low for customers.\nREASON: This is a fabrication. Project Manager actually said it might be expensive for customers due to the price being similar to what's available on the market (approximately 20 pounds).\n\nNO further issues were found in this section",
+            "Here are the flagged issues:\n\nISSUE 1: The group discussed simplifying remote control design, integrating multiple functions into one device.\nREASON: The transcript mentions that Marketing was given a remote control with only basic functions, and that they didn't tamper with it. However, the summary implies that they integrated multiple functions already.\n\nISSUE 2: making it user-friendly for both tech-savvy individuals and those with limited technical knowledge.\nREASON: While the group did discuss making the design self-intuitive and easy to understand, this phrase implies that the goal was to make it accessible to those with \"limited technical knowledge\". However, the transcript actually mentions that some users (like granny and grandads) might not be able to use advanced features like menus or text input.",
+            "After reviewing the summary and transcript section, I found the following issues:\n\nISSUE 1:\nThe discussion focused on the design of a remote control, including features such as buttons, menus, and possibly a flip-top remote control.\n\nREASON: The transcript does not explicitly mention \"possibly\" in relation to the flip-top remote control, it is mentioned as an idea by the Marketing person.\n\nISSUE 2:\nCost implications were considered, with plastic being suggested as a cost-effective material.\n\nREASON: While plastic was discussed as a potential material, there is no clear consensus on whether it would be cheaper. The transcript states that Industrial Designer had looked at the company website and noted that they put fashion into electronics, which suggests that plastic may not necessarily be more cost-effective.\n\nISSUE 3:\nThe meeting adjourned with an agreement to reconvene in half an hour, but there is no indication of this in the summary.\n\nREASON: The transcript does indicate that the Project Manager said \"So, see you in half an hour\", but it also mentions going back to their room, which is not included in the summary."
+          ],
+          "num_issues": 11,
+          "chunk_summaries_after": [
+            "The meeting started with Project Manager asking if they could dim the lights to improve visibility. The project plan was then introduced, focusing on developing a remote control that is original and user-friendly for a wide market. The team practiced brainstorming by drawing their favourite animals on a whiteboard, before moving forward with conceptualising the product's features.",
+            "The team discussed a marketing concept being drawn on a pen by Marketing but was repeatedly coming apart. They mentioned considering other designs, including a big cat. They decided to go with an eagle design instead of a seagull. The selling price of the product is 25 Euros or approximately 17 Pounds. Project Manager noted that this may be expensive for customers.",
+            "The group discussed simplifying remote control design and integrating basic functions into one device. They aimed to make the design self-intuitive and easy to understand for users of all technical levels, including those with limited experience with complex features like menus or text input.",
+            "The discussion focused on the design of a remote control, including features such as buttons, menus and a flip-top remote control. Cost implications were considered, with plastic being mentioned as a material option. The meeting adjourned with an agreement to reconvene in half an hour, and attendees planned to return to their room."
+          ],
+          "action": "refined"
+        },
+        {
+          "iteration": 2,
+          "chunk_summaries_before": [
+            "The meeting started with Project Manager asking if they could dim the lights to improve visibility. The project plan was then introduced, focusing on developing a remote control that is original and user-friendly for a wide market. The team practiced brainstorming by drawing their favourite animals on a whiteboard, before moving forward with conceptualising the product's features.",
+            "The team discussed a marketing concept being drawn on a pen by Marketing but was repeatedly coming apart. They mentioned considering other designs, including a big cat. They decided to go with an eagle design instead of a seagull. The selling price of the product is 25 Euros or approximately 17 Pounds. Project Manager noted that this may be expensive for customers.",
+            "The group discussed simplifying remote control design and integrating basic functions into one device. They aimed to make the design self-intuitive and easy to understand for users of all technical levels, including those with limited experience with complex features like menus or text input.",
+            "The discussion focused on the design of a remote control, including features such as buttons, menus and a flip-top remote control. Cost implications were considered, with plastic being mentioned as a material option. The meeting adjourned with an agreement to reconvene in half an hour, and attendees planned to return to their room."
+          ],
+          "chunk_feedback": [
+            "Here are the flagged issues:\n\nISSUE 1:\nThe project plan was then introduced, focusing on developing a remote control that is original and user-friendly for a wide market.\nREASON: The transcript does not mention anything about the team's focus being on making it \"user-friendly for a wide market\". While this might be implied, the actual text only mentions wanting it to be \"trendy, appealing to a wide market\".\n\nISSUE 2:\nThe team practiced brainstorming by drawing their favourite animals on a whiteboard.\nREASON: The transcript actually says that they will do tool training and discuss the project plan, then go into individual work on functional design. They only briefly practice drawing during this meeting.\n\nISSUE 3:\nThe team moved forward with conceptualising the product's features.\nREASON: This is an inference based on the original plan mentioned by the Project Manager (functional, conceptual, detailed designs). However, in this transcript section, they are still brainstorming and have not explicitly started conceptualising yet.",
+            "After reviewing the summary against the transcript section, I've found some issues:\n\nISSUE [1]: The team decided to go with a big cat design.\nREASON: The transcript actually states that they considered a big cat but ultimately went with an eagle design instead of a seagull.\n\nISSUE [2]: The selling price is 17 Pounds exactly.\nREASON: While the transcript mentions 17 as a possible conversion, it's stated as \"something like that\" and later corrected to around 15 or 16 Pounds by Project Manager and Industrial Designer.\n\nISSUE [3]: The profit aim is 50 million Euros for the first year.\nREASON: Although Marketing confirms this amount with a \"Mm-hmm\", there is no clear indication that it's specifically for the first year. Project Manager only says \"I presume so\" when asked if it's for the first year.\n\nISSUE [4]: The production cost is 12 Euros and half of the selling price goes to building it.\nREASON: The transcript actually states that the production cost is at 12.50 Euros, not 12 Euros. Additionally, Project Manager says \"half of the selling price is taken up by building it\", but this may be an oversimplification of a longer discussion about profit margins.\n\nISSUE [5]: The product will be focused on business markets.\nREASON: The transcript actually states that they are focusing on making the product accessible and usable for all age groups, not specifically targeting business markets.",
+            "Here are the results:\n\nISSUE [1]: The group discussed simplifying remote control design and integrating basic functions into one device.\nREASON: This summary implies that the integration of basic functions was a new idea introduced in this meeting, whereas it was actually a point brought up by the Industrial Designer early on.\n\nISSUE [2]: They aimed to make the design self-intuitive and easy to understand for users of all technical levels...\nREASON: The transcript section mentions considering the needs of both older generations and those who are not familiar with complex features like menus, but it does not explicitly state that they \"aimed\" to make it easy for users of all technical levels.\n\nISSUE [3]: ...including those with limited experience with complex features like menus or text input.\nREASON: While the transcript section does discuss the possibility of incorporating menu displays and the challenges of older generations using them, it does not explicitly state that they are discussing users with \"limited experience\" with such features.",
+            "After reviewing the summary against the transcript section, I've identified some errors:\n\nISSUE 1:\nThe discussion focused on the design of a remote control, including features such as buttons, menus and a flip-top remote control.\n\nREASON: The transcript mentions \"programme things\" instead of just \"buttons\".\n\nISSUE 2:\nCost implications were considered, with plastic being mentioned as a material option.\n\nREASON: In the transcript section, Marketing mentions that plastic is easily moulded and produced, but there's no direct mention of cost implications being explicitly discussed as a reason for choosing plastic. However, Industrial Designer does mention \"cost thing\" earlier in the conversation, which might imply consideration of costs, but it's not directly linked to the choice of material.\n\nISSUE 3:\nThe meeting adjourned with an agreement to reconvene in half an hour, and attendees planned to return to their room.\n\nREASON: The transcript section does not explicitly state that attendees planned to return to their room. Project Manager says \"I think so\", which is a non-committal response, and User Interface responds with \"Mm, yeah\", which does not confirm the plan.\n\nISSUE 4:\nThe discussion focused on the design of a remote control, including features such as buttons, menus and a flip-top remote control.\n\nREASON: The transcript mentions that Marketing suggests using plastic instead of metal, but there's no clear evidence to support the claim that \"metal\" was ever discussed or considered."
+          ],
+          "num_issues": 15,
+          "chunk_summaries_after": [
+            "The meeting started with Project Manager asking if they could dim the lights for better visibility. The project plan was introduced, focusing on developing a remote control that is original and appealing to a wide market. They practiced drawing their favourite animals on a whiteboard as an icebreaker exercise. This session will be followed by tool training and discussion of the project plan.",
+            "The team discussed a marketing concept being drawn on a pen by Marketing but was repeatedly coming apart. They decided to go with an eagle design instead of a seagull. The selling price of the product is approximately 17 Pounds. Project Manager noted that this may be expensive for customers.\n\nThey considered other designs, including a big cat, but ultimately went with an eagle. The production cost is 12.50 Euros, and they aim to make a profit of 50 million Euros.\n\nThe product will be accessible and usable by all age groups and is intended for the international market.",
+            "The group discussed simplifying remote control design and integrating basic functions into one device, as proposed by the Industrial Designer early on. They considered making the design self-intuitive for users of all technical levels, including older generations who may struggle with complex features like menus. The goal was to create a user-friendly interface that is easy to navigate.",
+            "The discussion focused on the design of a remote control, including features such as buttons, menus and a flip-top remote control. The use of plastic was suggested due to its ease of moulding and production. Cost implications were mentioned, with Industrial Designer referring to it as a \"cost thing\". The meeting adjourned with an agreement to reconvene in half an hour."
+          ],
+          "action": "refined"
+        },
+        {
+          "iteration": 3,
+          "chunk_summaries_before": [
+            "The meeting started with Project Manager asking if they could dim the lights for better visibility. The project plan was introduced, focusing on developing a remote control that is original and appealing to a wide market. They practiced drawing their favourite animals on a whiteboard as an icebreaker exercise. This session will be followed by tool training and discussion of the project plan.",
+            "The team discussed a marketing concept being drawn on a pen by Marketing but was repeatedly coming apart. They decided to go with an eagle design instead of a seagull. The selling price of the product is approximately 17 Pounds. Project Manager noted that this may be expensive for customers.\n\nThey considered other designs, including a big cat, but ultimately went with an eagle. The production cost is 12.50 Euros, and they aim to make a profit of 50 million Euros.\n\nThe product will be accessible and usable by all age groups and is intended for the international market.",
+            "The group discussed simplifying remote control design and integrating basic functions into one device, as proposed by the Industrial Designer early on. They considered making the design self-intuitive for users of all technical levels, including older generations who may struggle with complex features like menus. The goal was to create a user-friendly interface that is easy to navigate.",
+            "The discussion focused on the design of a remote control, including features such as buttons, menus and a flip-top remote control. The use of plastic was suggested due to its ease of moulding and production. Cost implications were mentioned, with Industrial Designer referring to it as a \"cost thing\". The meeting adjourned with an agreement to reconvene in half an hour."
+          ],
+          "chunk_feedback": [
+            "ISSUE [1]: The meeting started with Project Manager asking if they could dim the lights for better visibility.\nREASON: This never happened in this transcript section. They discussed turning off the lights later, but not initially.\n\nISSUE [2]: The project plan was introduced, focusing on developing a remote control that is original and appealing to a wide market.\nREASON: While the goal of developing an original remote control was mentioned, the specific wording \"appealing to a wide market\" was not used by the Project Manager. They said it should be \"trendy, appealing to a wide market, but you know, not a hunk of metal.\"\n\nISSUE [3]: This session will be followed by tool training and discussion of the project plan.\nREASON: The order of events was mentioned later in the transcript as \"we'll go do tool training, talk about the project plan...\"",
+            "After reviewing the summary against the transcript section, I found the following issues:\n\nISSUE 1:\nThe team discussed a marketing concept being drawn on a pen by Marketing but was repeatedly coming apart.\n\nREASON: This is an oversimplification and omits details from the transcript. In reality, the discussion was about a pen that was not functioning properly, with Marketing struggling to hold it together.\n\nISSUE 2:\nThey decided to go with an eagle design instead of a seagull.\n\nREASON: While they did settle on an eagle design, it's unclear if this was a unanimous decision or just an agreement among some team members. The transcript suggests that the idea of using a seagull as an alternative was mentioned, but not necessarily rejected.\n\nISSUE 3:\nThe selling price of the product is approximately 17 Pounds.\n\nREASON: This sentence is partially accurate. In the transcript, Industrial Designer estimates that 1.4 Euros would be equivalent to around 17 Pounds, and Marketing agrees with this estimate. However, the discussion mentions that there might not be a direct conversion from Euros to Pounds, and some team members mention 15 Pounds as an alternative.\n\nISSUE 4:\nProject Manager noted that this may be expensive for customers.\n\nREASON: This sentence is partially accurate. In the transcript, Project Manager does express concern about the selling price being high, but the discussion is more nuanced than a simple note of expense.\n\nISSUE 5:\nThey considered other designs, including a big cat, but ultimately went with an eagle.\n\nREASON: This is an oversimplification and omits details from the transcript. In reality, the team discussed various ideas, including using an eagle design, and Marketing seemed to favor it over a seagull or vampire bat, but there was no clear consensus on any single design.\n\nISSUE 6:\nThe production cost is 12.50 Euros, and they aim to make a profit of 50 million Euros.\n\nREASON: This sentence is partially accurate. In the transcript, Project Manager mentions that half of the selling price would go towards production costs (which are indeed around 12.50 Euros), but there's no clear indication that the profit goal is exactly 50 million Euros in the first year.\n\nISSUE 7:\nThe product will be accessible and usable by all age groups and is intended for the international market.\n\nREASON: This sentence is factually supported, but it implies a unanimous decision. In the transcript, Marketing emphasizes the importance of making the product user-friendly to everyone, while Project Manager agrees that they don't need to focus on different languages or regional considerations.\n\nISSUE 8:\nProject Manager noted that this may be expensive for customers.\n\nREASON: This sentence is factually supported but omits details from the discussion. In reality, the team discussed various aspects of the product's pricing and marketing strategy.\n\nThere are multiple issues present in the summary.",
+            "After reviewing the summary against the transcript, I've flagged some factual errors:\n\nISSUE 1:\nThe group considered making the design self-intuitive for users of all technical levels.\n\nREASON: The transcript does not mention \"all technical levels\" as a specific consideration. It mentions considering the needs of older generations who may struggle with complex features.\n\nISSUE 2:\nThey wanted to create an interface that displays less on the screen but is still usable by older generations.\n\nREASON: The transcript actually discusses displaying large print or having an option for large print, not reducing the amount of information displayed.",
+            "After reviewing the summary against the transcript, I have identified some factual errors:\n\nISSUE 1:\nThe discussion focused on the design of a remote control, including features such as buttons, menus and a flip-top remote control. \nREASON: The transcript does not mention \"features such as\" being discussed.\n\nISSUE 2:\nThe use of plastic was suggested due to its ease of moulding and production.\nREASON: The transcript actually mentions \"lightweight plastic\" being suggested, not just \"plastic\".\n\nISSUE 3:\nCost implications were mentioned, with Industrial Designer referring to it as a \"cost thing\".\nREASON: While the transcript does mention cost implications, there is no quote from the Industrial Designer referring to it as a \"cost thing\". The Project Manager mentions it as a potential issue.\n\nISSUE 4:\nThe meeting adjourned with an agreement to reconvene in half an hour.\nREASON: The transcript actually ends with the Project Manager saying they have half an hour before the next meeting, but there is no explicit statement that the meeting has adjourned."
+          ],
+          "num_issues": 17,
+          "chunk_summaries_after": [
+            "The project plan was introduced, focusing on developing an original remote control that is trendy and appealing to a wide market, but not a hunk of metal. They practiced drawing their favourite animals on a whiteboard as an icebreaker exercise. This will be followed by tool training and discussion of the project plan.",
+            "The team struggled with a pen that was not functioning properly during a marketing concept discussion. Marketing settled on an eagle design after considering other ideas. The selling price is approximately 17 Pounds, equivalent to around 1.4 Euros. Production costs are 12.50 Euros. The product aims for international accessibility and usability across all age groups.",
+            "The group discussed simplifying remote control design and integrating basic functions into one device, as proposed by the Industrial Designer early on. They considered making the design self-intuitive for older generations who may struggle with complex features like menus. The goal was to create a user-friendly interface that is easy to navigate, including an option for large print display.",
+            "The discussion focused on the design of a remote control with features such as buttons, menus and a flip-top remote control. Lightweight plastic was suggested due to its ease of moulding and production. Cost implications were mentioned by the Project Manager as a potential issue. The meeting will reconvene in half an hour."
+          ],
+          "action": "refined"
+        }
+      ]
+    }
+  }
+}

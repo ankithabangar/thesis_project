@@ -1,0 +1,127 @@
+{
+  "ES2004a": {
+    "baseline": {
+      "rouge1": 0.4408,
+      "rouge2": 0.0988,
+      "rougeL": 0.1959,
+      "bertscore_precision": 0.8699,
+      "bertscore_recall": 0.8676,
+      "bertscore_f1": 0.8687,
+      "summac": 0.9981,
+      "minicheck_mean_prob": 0.2665,
+      "minicheck_supported_ratio": 0.2,
+      "minicheck_num_claims": 5,
+      "minicheck_sentence_scores": [
+        {
+          "sentence": "The meeting began with a discussion on the environment, including adjusting lighting for better visibility, before introducing the project plan and brainstorming ideas for a remote control that would be original, user-friendly, and appealing to a wide market.",
+          "label": 0,
+          "prob": 0.1233
+        },
+        {
+          "sentence": "The team settled on an eagle design after exploring various options, with a selling price of 25 Euros or approximately 17 Pounds.",
+          "label": 0,
+          "prob": 0.0876
+        },
+        {
+          "sentence": "Project Manager expressed concern about the product's affordability.",
+          "label": 1,
+          "prob": 0.9687
+        },
+        {
+          "sentence": "Later discussions centered around simplifying the remote control's design, integrating multiple functions into one device, and making it accessible to both tech-savvy individuals and those with limited technical knowledge.",
+          "label": 0,
+          "prob": 0.0777
+        },
+        {
+          "sentence": "The team also explored features such as buttons, menus, and a potential flip-top design, while considering cost-effective materials like plastic.",
+          "label": 0,
+          "prob": 0.075
+        }
+      ],
+      "summary_words": 117
+    },
+    "self_refine": {
+      "rouge1": 0.4563,
+      "rouge2": 0.092,
+      "rougeL": 0.2205,
+      "bertscore_precision": 0.8697,
+      "bertscore_recall": 0.873,
+      "bertscore_f1": 0.8714,
+      "summac": 0.9965,
+      "minicheck_mean_prob": 0.2349,
+      "minicheck_supported_ratio": 0.0,
+      "minicheck_num_claims": 6,
+      "minicheck_sentence_scores": [
+        {
+          "sentence": "The meeting started with an icebreaker activity where the team drew their favorite animals on a whiteboard.",
+          "label": 0,
+          "prob": 0.1537
+        },
+        {
+          "sentence": "They then moved on to conceptualizing the product's features and developing a remote control that is original, user-friendly, and meets the needs of various age groups, including older generations.",
+          "label": 0,
+          "prob": 0.498
+        },
+        {
+          "sentence": "The marketing concept was discussed, and it was decided to use an eagle design instead of a seagull.",
+          "label": 0,
+          "prob": 0.187
+        },
+        {
+          "sentence": "The selling price of approximately 17 Pounds may impact the pricing strategy to avoid making the product look cheap.",
+          "label": 0,
+          "prob": 0.2736
+        },
+        {
+          "sentence": "To achieve this, the team is simplifying the remote control design by integrating multiple functions into one device and using intuitive designs such as menus and large print options.",
+          "label": 0,
+          "prob": 0.2357
+        },
+        {
+          "sentence": "The design includes buttons, menus, and a flip-top remote control with a bigger screen when flipped over, made from lightweight, moldable plastic to keep costs low.",
+          "label": 0,
+          "prob": 0.0611
+        }
+      ],
+      "summary_words": 138
+    },
+    "delta": {
+      "rouge1": 0.0155,
+      "rouge2": -0.0068,
+      "rougeL": 0.0246,
+      "bertscore_f1": 0.0027,
+      "summac": -0.0016,
+      "minicheck_mean_prob": -0.0316,
+      "minicheck_supported_ratio": -0.2
+    },
+    "self_refine_metadata": {
+      "total_iterations": 1,
+      "stopped_reason": "max_iterations",
+      "iterations": [
+        {
+          "iteration": 1,
+          "chunk_summaries_before": [
+            "The meeting started with a discussion on the environment, including dimming lights for better visibility. The project plan was then introduced, and the development of a remote control was discussed, aiming to be original, user-friendly, and appealing to a wide market. The team practiced brainstorming and design thinking by drawing their favourite animals on a whiteboard, with varying results, before moving forward with conceptualising the product's features.",
+            "The team discussed a marketing concept, which was being drawn on a pen by Marketing, but was repeatedly coming apart. They decided against creating a seagull design and settled on an eagle instead. The selling price of the product is 25 Euros or approximately 17 Pounds. Project Manager noted that this may be expensive for customers.",
+            "The group discussed simplifying remote control design, integrating multiple functions into one device, and making it user-friendly for both tech-savvy individuals and those with limited technical knowledge.",
+            "The discussion focused on the design of a remote control, including features such as buttons, menus, and possibly a flip-top remote control. Cost implications were considered, with plastic being suggested as a cost-effective material."
+          ],
+          "chunk_feedback": [
+            "Here are the flagged sentences:\n\nISSUE [1]: The meeting started with a discussion on the environment, including dimming lights for better visibility.\nREASON: The transcript indicates that the discussion about lighting was brief and initiated by the Project Manager, but it does not provide enough context to suggest that it was a major part of the meeting or that the environment was discussed extensively.\n\nISSUE [2]: The project plan was then introduced...\nREASON: The transcript states \"this is our agenda\" and lists some topics, but it does not explicitly state that this is an introduction of the project plan. It seems more like an overview of what will be covered in the meeting.\n\nISSUE [3]: ...and the development of a remote control was discussed, aiming to be original, user-friendly, and appealing to a wide market.\nREASON: The transcript does not mention anything about the remote control being \"appealing to a wide market\" as an explicit goal. It mentions that it wants to be something people haven't thought of before.\n\nISSUE [4]: The team practiced brainstorming and design thinking by drawing their favourite animals on a whiteboard, with varying results...\nREASON: This sentence implies that the meeting was focused on brainstorming and design thinking. While those topics are mentioned in passing, the main activity described in the transcript is drawing animals on a whiteboard as a way to get to know each other.\n\nISSUE [5]: ...before moving forward with conceptualising the product's features.\nREASON: This sentence implies that the team has moved forward and is now focused on conceptualizing the product's features. However, the transcript does not provide any indication of what comes next after the animal-drawing activity.\n\nHowever, upon re-reading the transcript, I realized that these sentences are more accurate summaries rather than factual errors. The issues flagged were due to a strict interpretation of the criteria.\n\nNO_ISSUES would be a correct response given the strict interpretation, but with some caveats on how accurately the summary represents the meeting.",
+            "After reviewing the summary against the transcript section, I found the following errors:\n\nISSUE 1:\nThe team settled on a seagull design instead of an eagle.\n\nREASON: The transcript actually says they decided against creating a seagull design and settled on an eagle instead.\n\nISSUE 2:\nProject Manager noted that this may be expensive for customers at a selling price of 25 Euros or approximately 17 Pounds.\n\nREASON: While Project Manager does mention the selling price, it is Marketing who states their concerns about the price being \"expensive\", and later notes that it's around 17 Pounds. The transcript also shows some discussion about undercutting the price to avoid making the product look cheap.\n\nISSUE 3:\nThe team decided not to focus on business markets or international languages.\n\nREASON: While Marketing does say they're not focusing on the business market, Project Manager later states that it's okay to be in the international market (e.g. Australia, America), and Marketing doesn't explicitly rule out language considerations.\n\nISSUE 4:\nThe team was trying to create a seagull design with a body behind it.\n\nREASON: The transcript actually shows them discussing an eagle design, not a seagull with a body behind it.\n\nNO further issues were found.",
+            "Here are the results of comparing the summary against the transcript section:\n\nISSUE [1]: The group discussed simplifying remote control design.\nREASON: This is a paraphrase and not an error. However, there is a slight inaccuracy - they also talked about integrating multiple functions into one device, but this part is not flagged since it's not explicitly mentioned as incorrect.\n\nISSUE [2]: making it user-friendly for both tech-savvy individuals.\nREASON: The transcript actually mentions making it user-friendly \"for those with limited technical knowledge\" (Marketing: \"I don't think I could go any further with it than that, so, I suppose it's got to be something usable by someone like me as well.\"). This is the opposite of what was stated.\n\nISSUE [3]: and those.\nREASON: The transcript actually mentions making it user-friendly for both \"someone like me\" (Marketing) and \"granny and grandads\" (Project Manager), but this part is not explicitly mentioned as incorrect. However, it's worth noting that the original statement could be seen as including tech-savvy individuals in the category of \"those\", which is a broader term than what was specifically discussed.\n\nGiven the above issues, I would say there are 2 factual errors:\n\nISSUE [1] and ISSUE [3]",
+            "ISSUE [1]: The discussion focused on the design of a remote control, including features such as buttons, menus, and possibly a flip-top remote control.\n\nREASON: The transcript mentions the possibility of a flip-top remote control, but it is not explicitly stated that it was \"possibly\" included in the design. \n\nISSUE [2]: Cost implications were considered, with plastic being suggested as a cost-effective material.\n\nREASON: While the transcript discusses the potential for plastic to be used as a material and mentions cost implications, it does not explicitly state that plastic is necessarily a cost-effective option."
+          ],
+          "num_issues": 14,
+          "chunk_summaries_after": [
+            "The meeting started with a discussion on dimming lights for better visibility. The project plan was outlined, including brainstorming and tool training. The team is developing a remote control aiming to be original and user-friendly. They practiced drawing their favourite animals on a whiteboard as an icebreaker activity before moving forward with conceptualizing the product's features.",
+            "The team discussed a marketing concept, which was being drawn on a pen by Marketing. They decided against creating a seagull design and settled on an eagle instead. The selling price of the product is approximately 17 Pounds. Project Manager noted that this may impact pricing strategy to avoid making the product look cheap.",
+            "The group discussed simplifying remote control design and integrating multiple functions into one device. They aimed to make it user-friendly for those with limited technical knowledge, as well as for tech-savvy individuals, by using intuitive designs such as menus and large print options, while also considering the needs of older generations.",
+            "The discussion focused on the design of a remote control, including features such as buttons, menus, and a flip-top remote control that would have a bigger screen when flipped over. Cost implications were considered, with plastic being mentioned as a material option. The team discussed using lightweight, moldable plastic to keep costs low."
+          ],
+          "action": "refined"
+        }
+      ]
+    }
+  }
+}

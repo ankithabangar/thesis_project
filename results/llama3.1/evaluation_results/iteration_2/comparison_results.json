@@ -1,0 +1,150 @@
+{
+  "ES2004a": {
+    "baseline": {
+      "rouge1": 0.4408,
+      "rouge2": 0.0988,
+      "rougeL": 0.1959,
+      "bertscore_precision": 0.8699,
+      "bertscore_recall": 0.8676,
+      "bertscore_f1": 0.8687,
+      "summac": 0.9981,
+      "minicheck_mean_prob": 0.2665,
+      "minicheck_supported_ratio": 0.2,
+      "minicheck_num_claims": 5,
+      "minicheck_sentence_scores": [
+        {
+          "sentence": "The meeting began with a discussion on the environment, including adjusting lighting for better visibility, before introducing the project plan and brainstorming ideas for a remote control that would be original, user-friendly, and appealing to a wide market.",
+          "label": 0,
+          "prob": 0.1233
+        },
+        {
+          "sentence": "The team settled on an eagle design after exploring various options, with a selling price of 25 Euros or approximately 17 Pounds.",
+          "label": 0,
+          "prob": 0.0876
+        },
+        {
+          "sentence": "Project Manager expressed concern about the product's affordability.",
+          "label": 1,
+          "prob": 0.9687
+        },
+        {
+          "sentence": "Later discussions centered around simplifying the remote control's design, integrating multiple functions into one device, and making it accessible to both tech-savvy individuals and those with limited technical knowledge.",
+          "label": 0,
+          "prob": 0.0777
+        },
+        {
+          "sentence": "The team also explored features such as buttons, menus, and a potential flip-top design, while considering cost-effective materials like plastic.",
+          "label": 0,
+          "prob": 0.075
+        }
+      ],
+      "summary_words": 117
+    },
+    "self_refine": {
+      "rouge1": 0.4015,
+      "rouge2": 0.1089,
+      "rougeL": 0.2008,
+      "bertscore_precision": 0.8612,
+      "bertscore_recall": 0.8668,
+      "bertscore_f1": 0.864,
+      "summac": 0.1636,
+      "minicheck_mean_prob": 0.5075,
+      "minicheck_supported_ratio": 0.6667,
+      "minicheck_num_claims": 6,
+      "minicheck_sentence_scores": [
+        {
+          "sentence": "The team started by brainstorming ideas for a new remote control that is trendy, user-friendly, and appealing to a wide market.",
+          "label": 1,
+          "prob": 0.5379
+        },
+        {
+          "sentence": "They practiced drawing their favourite animals on a whiteboard to get creative juices flowing, and discussed originality during the conceptual design process.",
+          "label": 0,
+          "prob": 0.0305
+        },
+        {
+          "sentence": "The marketing concept settled on an eagle design, but concerns were raised about its price point of 25 Euros or approximately 17 Pounds being too expensive for customers.",
+          "label": 0,
+          "prob": 0.1807
+        },
+        {
+          "sentence": "To address this issue, the team explored simplifying the remote control's design and making it more user-friendly, particularly for older generations.",
+          "label": 1,
+          "prob": 0.6018
+        },
+        {
+          "sentence": "They also discussed integrating multiple functions into one device, drawing inspiration from mobile phones.",
+          "label": 1,
+          "prob": 0.8644
+        },
+        {
+          "sentence": "The design should include basic buttons and menus with clear pictures and symbols, as well as a flip-top option to enable a larger screen when flipped over.",
+          "label": 1,
+          "prob": 0.8299
+        }
+      ],
+      "summary_words": 133
+    },
+    "delta": {
+      "rouge1": -0.0393,
+      "rouge2": 0.0101,
+      "rougeL": 0.0049,
+      "bertscore_f1": -0.0047,
+      "summac": -0.8345,
+      "minicheck_mean_prob": 0.241,
+      "minicheck_supported_ratio": 0.4667
+    },
+    "self_refine_metadata": {
+      "total_iterations": 2,
+      "stopped_reason": "max_iterations",
+      "iterations": [
+        {
+          "iteration": 1,
+          "chunk_summaries_before": [
+            "The meeting started with a discussion on the environment, including dimming lights for better visibility. The project plan was then introduced, and the development of a remote control was discussed, aiming to be original, user-friendly, and appealing to a wide market. The team practiced brainstorming and design thinking by drawing their favourite animals on a whiteboard, with varying results, before moving forward with conceptualising the product's features.",
+            "The team discussed a marketing concept, which was being drawn on a pen by Marketing, but was repeatedly coming apart. They decided against creating a seagull design and settled on an eagle instead. The selling price of the product is 25 Euros or approximately 17 Pounds. Project Manager noted that this may be expensive for customers.",
+            "The group discussed simplifying remote control design, integrating multiple functions into one device, and making it user-friendly for both tech-savvy individuals and those with limited technical knowledge.",
+            "The discussion focused on the design of a remote control, including features such as buttons, menus, and possibly a flip-top remote control. Cost implications were considered, with plastic being suggested as a cost-effective material."
+          ],
+          "chunk_feedback": [
+            "Here are the flagged issues:\n\nISSUE 1:\nThe meeting started with a discussion on the environment, including dimming lights for better visibility.\n\nREASON: The transcript actually discusses the lighting at the end of the project plan introduction, not at the beginning of the meeting.\n\nISSUE 2:\nThe development of a remote control was discussed, aiming to be original, user-friendly, and appealing to a wide market.\n\nREASON: The transcript mentions that it should be \"original\", \"trendy\", \"appealing to a wide market\", and \"user-friendly\" but does not explicitly mention being \"original\".\n\nISSUE 3:\nThe team practiced brainstorming and design thinking by drawing their favourite animals on a whiteboard, with varying results...\n\nREASON: This summary implies that the team was asked to draw their favorite animal, whereas in the transcript section, User Interface is asked to draw their favorite animal first, then others are asked to join.",
+            "After reviewing the summary against the transcript section, I found the following issues:\n\nISSUE [1]: The team decided against creating a seagull design.\nREASON: The transcript actually shows that Marketing considered a seagull as a possibility (\"you can tell it's a flying animal could have been a seagull\") but ultimately settled on an eagle.\n\nISSUE [2]: Project Manager noted that this may be expensive for customers because the production cost is high.\nREASON: While it is true that Project Manager said \"Okay, that's expensive\", this is not directly related to the production cost. The transcript actually shows that the production cost is 12.50 Euros and that this leaves a large margin.\n\nISSUE [3]: The team discussed using remote controls with complex programming.\nREASON: This summary omits important details about the specific issue they had with their universal remote control (it kept losing signals).",
+            "After reviewing the summary against the transcript section, I found the following issues:\n\nISSUE 1: The group discussed simplifying remote control design, integrating multiple functions into one device, and making it user-friendly for both tech-savvy individuals and those with limited technical knowledge.\n\nREASON: The sentence states that \"those with limited technical knowledge\" was a decision or point made by the group, but in reality, it was the Project Manager who brought up the issue of remote control usability for older generations (granny and grandads).\n\nISSUE 2: Marketing mentioned that her experience has only been with basic functions like on/off, volume up/down, channel changing, etc.\n\nREASON: The transcript section does not indicate that Marketing's experience is limited to these basic functions. Instead, she mentions that her experience has only been using the remote control as given, without tampering or programming it.\n\nISSUE 3: The summary implies that integrating multiple functions into one device was a point made by the Industrial Designer.\n\nREASON: While the Industrial Designer did mention that they could use all the remote controls at the same time, it was actually the User Interface who suggested integrating everything into one like on a mobile phone, with menus and an LCD display.",
+            "Here are the flagged sentences:\n\nISSUE 1: The discussion focused on the design of a remote control, including features such as buttons, menus, and possibly a flip-top remote control.\nREASON: The transcript mentions \"a menu to go into with obvious pictures, obvious symbols\" but not specifically \"features such as buttons\".\n\nISSUE 2: Cost implications were considered, with plastic being suggested as a cost-effective material.\nREASON: Although the transcript does discuss cost implications and suggests plastic might be cheaper, it's unclear if they consider it a definite cost-effective option. The statement simplifies the discussion to an implication that wasn't explicitly stated.\n\nISSUE 3: Marketing mentioned that Sky remote controls are made of metal and Telewest remote controls are silver plastic.\nREASON: In the transcript, Project Manager mentions that Sky remote controls have \"kind of moulded\" look, but there's no mention of them being made of metal. Similarly, Telewest remote controls were described as having a \"silver plastic\" look by Project Manager, not Marketing.\n\nISSUE 4: The discussion did not consider making the device fashionable and stylish like a mobile phone.\nREASON: This is an overstatement - while it was discussed whether the design should be as \"fashionable and stylish as a mobile phone\", there were also suggestions that it could still have a lightweight, moulded plastic look."
+          ],
+          "num_issues": 13,
+          "chunk_summaries_after": [
+            "The meeting started with Project Manager introducing the project plan and developing a remote control that should be \"trendy\", appealing to a wide market, user-friendly, and not just a \"hunk of metal\". The team practiced brainstorming by drawing their favourite animals on a whiteboard. They conceptualised the product's features and discussed its originality during the design process.",
+            "The team discussed a marketing concept, which was being drawn on a pen by Marketing, but was repeatedly coming apart. They settled on an eagle design after initially considering other flying animals. The selling price of the product is 25 Euros or approximately 17 Pounds. Project Manager noted that this may be expensive for customers.",
+            "The group discussed simplifying remote control design and making it user-friendly for both tech-savvy individuals and older generations (granny and grandads). Marketing's experience with remotes has only been using them as given without tampering or programming. Integrating multiple functions into one device was suggested by the User Interface, drawing inspiration from mobile phones.",
+            "The discussion focused on the design of a remote control, including basic buttons, menus with obvious pictures and symbols for controlling recording, and possibly a flip-top remote control. Cost implications were discussed, with plastic being suggested as a cost-effective material. The design should balance functionality with aesthetics, but it does not need to be as fashionable as a mobile phone."
+          ],
+          "action": "refined"
+        },
+        {
+          "iteration": 2,
+          "chunk_summaries_before": [
+            "The meeting started with Project Manager introducing the project plan and developing a remote control that should be \"trendy\", appealing to a wide market, user-friendly, and not just a \"hunk of metal\". The team practiced brainstorming by drawing their favourite animals on a whiteboard. They conceptualised the product's features and discussed its originality during the design process.",
+            "The team discussed a marketing concept, which was being drawn on a pen by Marketing, but was repeatedly coming apart. They settled on an eagle design after initially considering other flying animals. The selling price of the product is 25 Euros or approximately 17 Pounds. Project Manager noted that this may be expensive for customers.",
+            "The group discussed simplifying remote control design and making it user-friendly for both tech-savvy individuals and older generations (granny and grandads). Marketing's experience with remotes has only been using them as given without tampering or programming. Integrating multiple functions into one device was suggested by the User Interface, drawing inspiration from mobile phones.",
+            "The discussion focused on the design of a remote control, including basic buttons, menus with obvious pictures and symbols for controlling recording, and possibly a flip-top remote control. Cost implications were discussed, with plastic being suggested as a cost-effective material. The design should balance functionality with aesthetics, but it does not need to be as fashionable as a mobile phone."
+          ],
+          "chunk_feedback": [
+            "Here are the flagged sentences:\n\nISSUE [1]: The team practiced brainstorming by drawing their favourite animals on a whiteboard.\nREASON: The transcript shows that only the Project Manager and User Interface drew animals (tiger and dog respectively), while others in the room did not draw anything.\n\nISSUE [2]: They conceptualised the product's features during the design process.\nREASON: According to the transcript, conceptualisation of product features occurred under the category \"Conceptual Design\", which was mentioned by the Project Manager as part of the design process.",
+            "Here are the issues I've found:\n\nISSUE [1]: The team discussed a marketing concept, which was being drawn on a pen by Marketing, but was repeatedly coming apart.\nREASON: The transcript does not indicate that the marketing concept was being drawn on a pen; it says \"Again this is off the top of my head, I was gonna do a big cat too, um\" and shows a discussion about the design.\n\nISSUE [2]: They settled on an eagle design after initially considering other flying animals.\nREASON: While it's true they discussed eagles, the transcript does not indicate that other flying animals were initially considered; the conversation jumps directly to discussing the eagle as a design.\n\nISSUE [3]: The selling price of the product is 25 Euros or approximately 17 Pounds.\nREASON: This sentence contradicts the discussion in the transcript section. While the team discussed the conversion from euros to pounds, they did not conclude that 1 euro is equal to 1 pound; Industrial Designer suggested it was \"about\" 1.4 euros, and Marketing mentioned 17 as a possible answer, which Project Manager said was likely correct.\n\nISSUE [4]: Project Manager noted that this may be expensive for customers.\nREASON: This sentence contradicts the transcript, where Project Manager actually says \"Okay, that's expensive\" in response to the price being 17 Pounds.",
+            "After reviewing the summary against the transcript section, I found the following errors:\n\nISSUE 1:\nThe group discussed simplifying remote control design and making it user-friendly for both tech-savvy individuals and older generations (granny and grandads).\n\nREASON: The transcript mentions \"granny\" specifically, not \"grandads\".\n\nISSUE 2:\nIntegrating multiple functions into one device was suggested by the User Interface, drawing inspiration from mobile phones.\n\nREASON: While the User Interface suggests using a similar concept to mobile phones, it is Marketing who explicitly mentions this idea.",
+            "ISSUE [1]:\nThe discussion focused on the design of a remote control, including basic buttons, menus with obvious pictures and symbols for controlling recording, and possibly a flip-top remote control.\n\nREASON: The sentence states that a \"possibly\" is implied, but in the transcript section, it is explicitly mentioned as a suggestion by both the Project Manager and Marketing.\n\nISSUE [2]:\nCost implications were discussed, with plastic being suggested as a cost-effective material.\n\nREASON: While the transcript section does discuss using plastic, there is no mention of it being explicitly suggested as a \"cost-effective\" material. The conversation revolves around its ease of production and moldability, but not necessarily its cost-effectiveness compared to other materials.\n\nISSUE [3]:\nThe design should balance functionality with aesthetics, but it does not need to be as fashionable as a mobile phone.\n\nREASON: This sentence is partially contradicted by the transcript section. While it is stated that the remote control doesn't have to be as fashionable as a mobile phone, there is also a suggestion from the Industrial Designer (based on the company's website) that incorporating some level of fashion or style into the design might not be out of line."
+          ],
+          "num_issues": 11,
+          "chunk_summaries_after": [
+            "The meeting started with Project Manager introducing the project plan and developing a remote control that should be \"trendy\", appealing to a wide market, user-friendly, and not just a \"hunk of metal\". The team practiced drawing their favourite animals on a whiteboard, starting with the Project Manager's tiger and User Interface's dog. They also discussed originality during the design process under the category \"Conceptual Design\".",
+            "The team discussed a marketing concept, which included a design that was repeatedly coming apart. They settled on an eagle design. The selling price of the product is 25 Euros or approximately 17 Pounds. Project Manager noted that this may be expensive for customers.",
+            "The group discussed simplifying remote control design and making it user-friendly for older generations (including granny). Marketing's experience with remotes has only been using them as given without tampering or programming. The User Interface suggested integrating multiple functions into one device, drawing inspiration from mobile phones, similar to the concept of menus on new mobile phones.",
+            "The discussion focused on the design of a remote control, including basic buttons and menus with obvious pictures and symbols for controlling recording, as well as a flip-top remote control to enable a larger screen when flipped over. Cost implications were discussed, with plastic being noted as easily molded and produced. The Industrial Designer suggested incorporating some level of style into the design, based on the company's website."
+          ],
+          "action": "refined"
+        }
+      ]
+    }
+  }
+}

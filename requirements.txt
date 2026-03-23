@@ -1,2 +1,5 @@
 langchain
 langchain-ollama
+rouge-score
+bert-score
+summac
