@@ -8,7 +8,7 @@ from summac.model_summac import SummaCConv
 from minicheck.minicheck import MiniCheck
 
 
-BASELINE_PATH = Path(".results/llama3.1/baseline_summaries.json")
+BASELINE_RESULTS = Path(".results/llama3.1/evaluation_results.json")
 SELF_REFINE_PATH = Path(
     "./results/llama3.1/self_refined/iteration_3/self_refined_summaries.json"
 )
@@ -118,7 +118,7 @@ def evaluate_summary(summary: str, reference: str, source: str, label: str) -> d
 
 
 def main():
-    with open(BASELINE_PATH, "r", encoding="utf-8") as f:
+    with open(BASELINE_RESULTS, "r", encoding="utf-8") as f:
         baseline_scores_data = json.load(f)
 
     with open(SELF_REFINE_PATH, "r", encoding="utf-8") as f:
