@@ -1,4 +1,12 @@
 data/raw/
 venv/
+venv39/
+.venv/
+venvqa/
 ckpts/
 .vscode/
+Miniconda3*.sh
+baseline_evaluation_results.json
+docker/laughing-yonath/AlignScore-large.ckpt
+docker/laughing-yonath/qafacteval_models/
+docker/laughing-yonath/hf_cache/

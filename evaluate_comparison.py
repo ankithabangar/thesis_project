@@ -8,13 +8,9 @@ from summac.model_summac import SummaCConv
 from minicheck.minicheck import MiniCheck
 
 
-BASELINE_RESULTS = Path(".results/llama3.1/evaluation_results.json")
-SELF_REFINE_PATH = Path(
-    "./results/llama3.1/self_refined/iteration_3/self_refined_summaries.json"
-)
-OUTPUT_PATH = Path(
-    "./results/llama3.1/evaluation_results/iteration_3/comparison_results.json"
-)
+BASELINE_RESULTS = Path("./test_dir/baseline_evaluation_results.json")
+SELF_REFINE_PATH = Path("./test_dir/loop_3/self_refined_summaries.json")
+OUTPUT_PATH = Path("./test_dir/loop_3/comparison_results.json")
 
 METRICS = [
     "rouge1",

@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod +x /Users/ankithabangar/thesis_project/run.sh)"
+    ]
+  }
+}

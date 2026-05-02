@@ -7,13 +7,11 @@ from langchain_ollama.llms import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 
 
-BASELINE_PATH = Path(".results/llama3.1/baseline_summaries.json")
-CLEANED_PATH = Path("./data/preprocessed/cleaned_meetings.json")
-OUTPUT_PATH = Path(
-    "./results/llama3.1/self_refined/iteration_3/self_refined_summaries.json"
-)
+BASELINE_PATH = Path("./test_dir/baseline_summaries.json")
+CLEANED_PATH = Path("./test_dir/cleaned_meetings.json")
+OUTPUT_PATH = Path("./test_dir/loop_3/self_refined_summaries.json")
 
-MAX_ITERATIONS = 1
+MAX_ITERATIONS = 3
 
 model = OllamaLLM(model="llama3.1:8b")
 

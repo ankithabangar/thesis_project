@@ -1,0 +1,657 @@
+{
+  "Bed003": {
+    "rouge1": 0.2868,
+    "rouge2": 0.0152,
+    "rougeL": 0.1434,
+    "bertscore_precision": 0.8368,
+    "bertscore_recall": 0.8337,
+    "bertscore_f1": 0.8352,
+    "summac": 0.0364,
+    "minicheck_mean_prob": 0.1039,
+    "minicheck_supported_ratio": 0.0,
+    "minicheck_num_claims": 6,
+    "minicheck_sentence_scores": [
+      {
+        "sentence": "The group discussed various aspects of their project, starting with adjustments to the JavaBayes program, including simplifying nodes and identifying cues for inference.",
+        "label": 0,
+        "prob": 0.0301
+      },
+      {
+        "sentence": "They explored concepts such as \"nice walls\" and salience, and proposed a model with multiple layers incorporating hidden variables like tour status or hurry level.",
+        "label": 0,
+        "prob": 0.126
+      },
+      {
+        "sentence": "The team also clarified distinctions between different node types, including \"doing business\" and \"tourist,\" and considered adding new values to account for medium hurry status.",
+        "label": 0,
+        "prob": 0.1085
+      },
+      {
+        "sentence": "To mitigate complexity, they opted for a demo using JavaBayes to test inference capabilities.",
+        "label": 0,
+        "prob": 0.1937
+      },
+      {
+        "sentence": "Action items included checking how JavaBayes handles new variables and consulting with Srini about its functionality.",
+        "label": 0,
+        "prob": 0.0151
+      },
+      {
+        "sentence": "The discussion also touched on data collection, including adding navigational tasks with implicit intentions and labeling a corpus to enable analysis, with Fey volunteering as the \"wizard\" and Liz agreeing to participate in a trial run.",
+        "label": 0,
+        "prob": 0.1499
+      }
+    ],
+    "summary_words": 139
+  },
+  "Bed008": {
+    "rouge1": 0.3289,
+    "rouge2": 0.0473,
+    "rougeL": 0.1879,
+    "bertscore_precision": 0.8575,
+    "bertscore_recall": 0.8632,
+    "bertscore_f1": 0.8603,
+    "summac": 0.0403,
+    "minicheck_mean_prob": 0.539,
+    "minicheck_supported_ratio": 0.4444,
+    "minicheck_num_claims": 9,
+    "minicheck_sentence_scores": [
+      {
+        "sentence": "The meeting focused on developing a belief-net system that simulates user financial behavior, influencing decisions made within the network.",
+        "label": 1,
+        "prob": 0.5149
+      },
+      {
+        "sentence": "The group clarified key concepts, including thriftiness and user finance, and defined how values are updated in the system.",
+        "label": 0,
+        "prob": 0.1854
+      },
+      {
+        "sentence": "They then discussed determining whether users enter, view, or approach locations based on factors such as ontology, discourse, and user model.",
+        "label": 0,
+        "prob": 0.485
+      },
+      {
+        "sentence": "The endpoint decision was also considered, with a suggestion to merge properties into an intermediate structure.",
+        "label": 1,
+        "prob": 0.7478
+      },
+      {
+        "sentence": "To derive features indicating main actions within places, the team weighed options for primitive entity features versus activity type-derived features.",
+        "label": 1,
+        "prob": 0.9062
+      },
+      {
+        "sentence": "A new node \"underbar-U\" was proposed for endpoint decisions based on user models.",
+        "label": 1,
+        "prob": 0.9246
+      },
+      {
+        "sentence": "The discussion continued to break down complexities in user state and compatibility, encapsulating these as separate entities.",
+        "label": 0,
+        "prob": 0.423
+      },
+      {
+        "sentence": "Preconditions for actions were also discussed, including affordability and physical ability.",
+        "label": 0,
+        "prob": 0.2637
+      },
+      {
+        "sentence": "Finally, a plan was outlined for organizing the project, with tasks assigned to specific individuals and a focus on creating a system that incorporates discourse context into belief-net decision nodes.",
+        "label": 0,
+        "prob": 0.4005
+      }
+    ],
+    "summary_words": 166
+  },
+  "Bmr006": {
+    "rouge1": 0.2547,
+    "rouge2": 0.0,
+    "rougeL": 0.1242,
+    "bertscore_precision": 0.8326,
+    "bertscore_recall": 0.8694,
+    "bertscore_f1": 0.8506,
+    "summac": 0.0281,
+    "minicheck_mean_prob": 0.3841,
+    "minicheck_supported_ratio": 0.3077,
+    "minicheck_num_claims": 13,
+    "minicheck_sentence_scores": [
+      {
+        "sentence": "The team began by discussing a software error and noting down details for analysis, while considering new procedures for digit recordings.",
+        "label": 0,
+        "prob": 0.2521
+      },
+      {
+        "sentence": "A new student with a signal-processing background was mentioned as a potential addition in January.",
+        "label": 0,
+        "prob": 0.0198
+      },
+      {
+        "sentence": "The discussion then shifted to selecting meetings for data collection, focusing on pre-existing English-language meetings for reliable results.",
+        "label": 0,
+        "prob": 0.0807
+      },
+      {
+        "sentence": "The group also explored using language models and grammar to analyze corpora, considering alternative options such as recording in other departments or finding a partner on campus.",
+        "label": 0,
+        "prob": 0.1686
+      },
+      {
+        "sentence": "Equipment needs were discussed, with alternatives to portable devices considered sufficient for some tasks.",
+        "label": 0,
+        "prob": 0.2723
+      },
+      {
+        "sentence": "The team also addressed challenges of setting up a multi-disciplinary study, including equipment safety and participant engagement.",
+        "label": 0,
+        "prob": 0.1459
+      },
+      {
+        "sentence": "A proposal was made to give meeting attendees CDs with transcripts after review, and concerns about copyright issues were raised.",
+        "label": 0,
+        "prob": 0.405
+      },
+      {
+        "sentence": "The group later focused on archiving old data, clearing space, and acquiring additional storage capacity.",
+        "label": 0,
+        "prob": 0.2755
+      },
+      {
+        "sentence": "Disk space issues were resolved by moving data from the Meeting Recorder to the Broadcast News disk, freeing up space.",
+        "label": 1,
+        "prob": 0.6303
+      },
+      {
+        "sentence": "PhD Candidate proposed studying overlapping speech zones using a cluster algorithm or neural net.",
+        "label": 1,
+        "prob": 0.9282
+      },
+      {
+        "sentence": "Concerns were raised about using neural networks due to difficulty in understanding internal workings, with Professor D suggesting sensitivity analyses and normalizing inputs.",
+        "label": 1,
+        "prob": 0.9217
+      },
+      {
+        "sentence": "The team discussed microphone arrays for noise reduction and noise cancellation, as well as the challenges of using multiple microphones in conference settings.",
+        "label": 0,
+        "prob": 0.024
+      },
+      {
+        "sentence": "An action item was proposed to discuss anonymization of data at the next meeting.",
+        "label": 1,
+        "prob": 0.8686
+      }
+    ],
+    "summary_words": 241
+  },
+  "ES2011a": {
+    "rouge1": 0.3027,
+    "rouge2": 0.0219,
+    "rougeL": 0.1514,
+    "bertscore_precision": 0.8526,
+    "bertscore_recall": 0.8552,
+    "bertscore_f1": 0.8539,
+    "summac": 0.1043,
+    "minicheck_mean_prob": 0.3784,
+    "minicheck_supported_ratio": 0.3333,
+    "minicheck_num_claims": 6,
+    "minicheck_sentence_scores": [
+      {
+        "sentence": "The team began by discussing their project to create an original and user-friendly remote control.",
+        "label": 1,
+        "prob": 0.8673
+      },
+      {
+        "sentence": "They brainstormed characteristics of favourite animals using whiteboards to aid in the creative process.",
+        "label": 1,
+        "prob": 0.7747
+      },
+      {
+        "sentence": "The discussion then shifted to designing a functional remote control, considering features such as a call button, light, and vibration to facilitate location.",
+        "label": 0,
+        "prob": 0.3688
+      },
+      {
+        "sentence": "Ideas for robust design included a small screen, few buttons, and water-resistance, with potential clip-on and satellite programming capabilities.",
+        "label": 0,
+        "prob": 0.009
+      },
+      {
+        "sentence": "However, the team clarified that they do not want to compromise on size or cost.",
+        "label": 0,
+        "prob": 0.0755
+      },
+      {
+        "sentence": "As the meeting concluded, there was no clear resolution regarding roles within the team, specifically the responsibilities of the User Interface Designer and Industrial Designer.",
+        "label": 0,
+        "prob": 0.1754
+      }
+    ],
+    "summary_words": 111
+  },
+  "ES2011b": {
+    "rouge1": 0.3636,
+    "rouge2": 0.0826,
+    "rougeL": 0.2091,
+    "bertscore_precision": 0.8592,
+    "bertscore_recall": 0.8746,
+    "bertscore_f1": 0.8668,
+    "summac": 0.0558,
+    "minicheck_mean_prob": 0.2948,
+    "minicheck_supported_ratio": 0.3333,
+    "minicheck_num_claims": 6,
+    "minicheck_sentence_scores": [
+      {
+        "sentence": "The meeting centered around redesigning the company's current remote controls based on customer feedback from usability testing.",
+        "label": 1,
+        "prob": 0.5704
+      },
+      {
+        "sentence": "The marketing team presented a prioritized list of buttons for design based on frequency of use.",
+        "label": 1,
+        "prob": 0.9848
+      },
+      {
+        "sentence": "The User Interface team then proposed two approaches: one focusing on design and user experience, and another detailing technical functions and components.",
+        "label": 0,
+        "prob": 0.0839
+      },
+      {
+        "sentence": "After discussion, the team decided to incorporate corporate image and colors, simplify functions, and target teenagers and young professionals as users.",
+        "label": 0,
+        "prob": 0.0298
+      },
+      {
+        "sentence": "They also agreed to include a power button, numbers, and a single menu button, but omitted VCR capabilities due to international coding differences.",
+        "label": 0,
+        "prob": 0.0077
+      },
+      {
+        "sentence": "Navigation and control functions were discussed, with suggestions for a scrolling button, separate buttons for volume and channels, and a function switch button for accommodating different devices and modes.",
+        "label": 0,
+        "prob": 0.0922
+      }
+    ],
+    "summary_words": 128
+  },
+  "ES2011c": {
+    "rouge1": 0.3643,
+    "rouge2": 0.0719,
+    "rougeL": 0.1786,
+    "bertscore_precision": 0.8435,
+    "bertscore_recall": 0.8658,
+    "bertscore_f1": 0.8545,
+    "summac": 0.0307,
+    "minicheck_mean_prob": 0.4889,
+    "minicheck_supported_ratio": 0.5,
+    "minicheck_num_claims": 8,
+    "minicheck_sentence_scores": [
+      {
+        "sentence": "The meeting began by discussing conceptual design for a remote control, considering components such as custom case design and standard parts like buttons and wheels.",
+        "label": 1,
+        "prob": 0.6389
+      },
+      {
+        "sentence": "A specific design concept featuring a fruit and vegetable theme emerged, with the decision made not to include a screen for navigating multiple channels.",
+        "label": 0,
+        "prob": 0.224
+      },
+      {
+        "sentence": "Instead, a graphical interface on a TV screen was proposed.",
+        "label": 1,
+        "prob": 0.9706
+      },
+      {
+        "sentence": "The discussion continued with consideration of the TV's user interface, including options for accessing settings through a central button or menu.",
+        "label": 1,
+        "prob": 0.7516
+      },
+      {
+        "sentence": "The team also explored the idea of a touch-based graphical interface for the remote control, which some saw as innovative and trendy but others questioned in terms of feasibility and user need.",
+        "label": 0,
+        "prob": 0.0486
+      },
+      {
+        "sentence": "Design concepts for the product were then discussed, including ideas for changing colours or designs on the surface, with a squashy ball shape and removable cover proposed.",
+        "label": 0,
+        "prob": 0.2638
+      },
+      {
+        "sentence": "Prototypes will be created to test user feedback, and options for power sources such as batteries, solar power, or a dynamo were considered.",
+        "label": 0,
+        "prob": 0.1491
+      },
+      {
+        "sentence": "The Industrial Designer noted that chip-on-print technology may be relatively cheap in bulk, but no concrete figure was mentioned.",
+        "label": 1,
+        "prob": 0.8643
+      }
+    ],
+    "summary_words": 181
+  },
+  "ES2011d": {
+    "rouge1": 0.3518,
+    "rouge2": 0.0711,
+    "rougeL": 0.1809,
+    "bertscore_precision": 0.8573,
+    "bertscore_recall": 0.8715,
+    "bertscore_f1": 0.8644,
+    "summac": 0.0561,
+    "minicheck_mean_prob": 0.4489,
+    "minicheck_supported_ratio": 0.2857,
+    "minicheck_num_claims": 7,
+    "minicheck_sentence_scores": [
+      {
+        "sentence": "The team discussed various aspects of a remote control project, including design and user interface elements.",
+        "label": 1,
+        "prob": 0.9633
+      },
+      {
+        "sentence": "They decided on using a regular chip for advanced features and evaluated the project's standards using an 11-point criteria table.",
+        "label": 0,
+        "prob": 0.2217
+      },
+      {
+        "sentence": "The design was critiqued, with suggestions made to improve ergonomics and comfort by redesigning the shape.",
+        "label": 0,
+        "prob": 0.2881
+      },
+      {
+        "sentence": "A compromise between functionality and design was proposed, featuring a broccoli-like shape with patterns representing different fruits.",
+        "label": 0,
+        "prob": 0.1808
+      },
+      {
+        "sentence": "Established shapes were retained for the touch pad due to redesign costs.",
+        "label": 0,
+        "prob": 0.463
+      },
+      {
+        "sentence": "Overall, the team felt that their product met requirements, fit the budget, and was trendy, and agreed to revisit certain design elements while maintaining creative freedom.",
+        "label": 0,
+        "prob": 0.0365
+      },
+      {
+        "sentence": "Final reports are to be written.",
+        "label": 1,
+        "prob": 0.989
+      }
+    ],
+    "summary_words": 113
+  },
+  "covid_4": {
+    "rouge1": 0.3632,
+    "rouge2": 0.0741,
+    "rougeL": 0.1895,
+    "bertscore_precision": 0.8452,
+    "bertscore_recall": 0.8561,
+    "bertscore_f1": 0.8506,
+    "summac": 0.0207,
+    "minicheck_mean_prob": 0.3621,
+    "minicheck_supported_ratio": 0.375,
+    "minicheck_num_claims": 8,
+    "minicheck_sentence_scores": [
+      {
+        "sentence": "The committee met to discuss various petitions and issues related to the COVID-19 pandemic.",
+        "label": 1,
+        "prob": 0.895
+      },
+      {
+        "sentence": "Petitions were presented on topics such as maternal mental health, cystic fibrosis treatment, family doctor shortages, firearms legislation, Indigenous rights, and environmental concerns.",
+        "label": 0,
+        "prob": 0.0208
+      },
+      {
+        "sentence": "The government acknowledged gaps in programs like CERB, leaving some individuals without support, particularly single parents and those experiencing homelessness.",
+        "label": 1,
+        "prob": 0.9377
+      },
+      {
+        "sentence": "To address this, the Prime Minister committed to filling these gaps and providing adequate housing solutions.",
+        "label": 1,
+        "prob": 0.8782
+      },
+      {
+        "sentence": "Measures were also discussed to combat fraud and tax evasion, including audits and assessments of large employer emergency funding facility applicants.",
+        "label": 0,
+        "prob": 0.0366
+      },
+      {
+        "sentence": "The government announced a one-time tax-free payment of up to $500 for vulnerable seniors, and assistance for tourism industries, lobster fishery, and small businesses affected by COVID-19.",
+        "label": 0,
+        "prob": 0.0256
+      },
+      {
+        "sentence": "Additionally, the government committed to working with Indigenous leaders on Wet'suwet'en rights, investing in high-speed Internet and tourism infrastructure, and supporting charities and non-profits during the pandemic.",
+        "label": 0,
+        "prob": 0.0864
+      },
+      {
+        "sentence": "Concerns were raised about vaccine development and distribution, gun control legislation, treatment of seniors in long-term care facilities, and unequal treatment of industries, which the government addressed through various commitments and measures.",
+        "label": 0,
+        "prob": 0.0163
+      }
+    ],
+    "summary_words": 180
+  },
+  "covid_9": {
+    "rouge1": 0.2576,
+    "rouge2": 0.0687,
+    "rougeL": 0.1515,
+    "bertscore_precision": 0.8307,
+    "bertscore_recall": 0.8673,
+    "bertscore_f1": 0.8486,
+    "summac": 0.0213,
+    "minicheck_mean_prob": 0.2372,
+    "minicheck_supported_ratio": 0.1429,
+    "minicheck_num_claims": 7,
+    "minicheck_sentence_scores": [
+      {
+        "sentence": "The meeting covered a wide range of topics, including the RCMP's use of law enforcement justification provisions and the implementation of UN Security Council resolutions on women, peace and security.",
+        "label": 0,
+        "prob": 0.4777
+      },
+      {
+        "sentence": "Petitions were presented on issues such as pollinator protection, the Coastal GasLink project, and the presidential election in Guyana.",
+        "label": 0,
+        "prob": 0.0075
+      },
+      {
+        "sentence": "The Bloc called for a commission of inquiry into police brutality against aboriginals, while the MP for MissionMatsquiFraser Canyon advocated for addressing internet connectivity deficits between rural and urban Canada.",
+        "label": 0,
+        "prob": 0.0102
+      },
+      {
+        "sentence": "The Prime Minister denied allegations of withholding funds from the Auditor General's office and offered to work with the new Auditor General to ensure her office has necessary resources.",
+        "label": 0,
+        "prob": 0.1851
+      },
+      {
+        "sentence": "A government bill aimed at helping people with disabilities was debated, with the NDP pressing for a commitment to extend the CERB for families in need.",
+        "label": 1,
+        "prob": 0.956
+      },
+      {
+        "sentence": "Other topics discussed included the government's response to COVID-19, including funding for healthcare, child care investments, and support for small businesses and artists.",
+        "label": 0,
+        "prob": 0.0115
+      },
+      {
+        "sentence": "The meeting concluded with the announcement of measures to support people with disabilities during the pandemic and the extension of the CERB on July 5.",
+        "label": 0,
+        "prob": 0.0124
+      }
+    ],
+    "summary_words": 182
+  },
+  "education_13": {
+    "rouge1": 0.3356,
+    "rouge2": 0.0541,
+    "rougeL": 0.1745,
+    "bertscore_precision": 0.8342,
+    "bertscore_recall": 0.8432,
+    "bertscore_f1": 0.8387,
+    "summac": 0.0154,
+    "minicheck_mean_prob": 0.5512,
+    "minicheck_supported_ratio": 0.5714,
+    "minicheck_num_claims": 7,
+    "minicheck_sentence_scores": [
+      {
+        "sentence": "The discussion focused on reforming the law to remove the defence of reasonable punishment for children.",
+        "label": 1,
+        "prob": 0.894
+      },
+      {
+        "sentence": "The current law, which allows physical punishment under section 58 of the Children Act 2004, may no longer be suitable given changing attitudes towards physical punishment among younger people.",
+        "label": 0,
+        "prob": 0.0458
+      },
+      {
+        "sentence": "Barry Hughes explained that removing this defence would lead to increased police referrals to the Crown Prosecution Service (CPS), who would apply an evidential test and public interest stage before deciding whether to prosecute.",
+        "label": 1,
+        "prob": 0.6444
+      },
+      {
+        "sentence": "This could result in differences in prosecution between England and Wales, due to varying laws, but the CPS has flexibility to adapt and issue policy guidance accordingly.",
+        "label": 1,
+        "prob": 0.9766
+      },
+      {
+        "sentence": "Hughes proposed updating guidance to reflect these differences and developing specialist knowledge on the public interest test.",
+        "label": 1,
+        "prob": 0.9511
+      },
+      {
+        "sentence": "He also emphasized the importance of staff awareness and potential unintended consequences, including malicious reporting against parents and breaching human rights.",
+        "label": 0,
+        "prob": 0.0196
+      },
+      {
+        "sentence": "A 12-24 month review period was suggested to assess effectiveness, with stakeholder involvement, and it was noted that prosecution numbers for child smacking would likely be small due to available diversionary methods.",
+        "label": 0,
+        "prob": 0.3266
+      }
+    ],
+    "summary_words": 176
+  },
+  "education_4": {
+    "rouge1": 0.3282,
+    "rouge2": 0.0308,
+    "rougeL": 0.1679,
+    "bertscore_precision": 0.8517,
+    "bertscore_recall": 0.8634,
+    "bertscore_f1": 0.8575,
+    "summac": 0.0214,
+    "minicheck_mean_prob": 0.7283,
+    "minicheck_supported_ratio": 0.6667,
+    "minicheck_num_claims": 9,
+    "minicheck_sentence_scores": [
+      {
+        "sentence": "The meeting discussed the rising trend of exclusions in education, attributing it to challenging behaviour and unmet additional learning needs.",
+        "label": 0,
+        "prob": 0.2094
+      },
+      {
+        "sentence": "Funding challenges and new legislation were identified as contributing factors, particularly for students with additional needs.",
+        "label": 1,
+        "prob": 0.9415
+      },
+      {
+        "sentence": "Local authorities acknowledged pressure on schools due to budget constraints, potentially leading to increased exclusions.",
+        "label": 1,
+        "prob": 0.9725
+      },
+      {
+        "sentence": "The panel noted variation in provision between terms and weeks, creating challenges for retaining pupils in mainstream schools.",
+        "label": 1,
+        "prob": 0.9833
+      },
+      {
+        "sentence": "Collaborative working was seen as essential to provide a continuum of support.",
+        "label": 1,
+        "prob": 0.9903
+      },
+      {
+        "sentence": "Concerns were raised about quality assurance in alternative provision, particularly home tuition and EOTAS provisions in Wales.",
+        "label": 1,
+        "prob": 0.928
+      },
+      {
+        "sentence": "The role of accountability measures in driving exclusions was questioned, and the need for further research on adverse childhood experiences and behavioural issues was emphasized.",
+        "label": 0,
+        "prob": 0.3893
+      },
+      {
+        "sentence": "Addressing adverse childhood experiences through teacher training and curriculum changes was proposed to improve mental health support and reduce exclusions.",
+        "label": 0,
+        "prob": 0.483
+      },
+      {
+        "sentence": "A whole-school approach to emotional well-being and mental health was highlighted as crucial in preventing issues from arising, particularly among vulnerable young people.",
+        "label": 1,
+        "prob": 0.6576
+      }
+    ],
+    "summary_words": 166
+  },
+  "education_9": {
+    "rouge1": 0.3058,
+    "rouge2": 0.0431,
+    "rougeL": 0.1529,
+    "bertscore_precision": 0.839,
+    "bertscore_recall": 0.8454,
+    "bertscore_f1": 0.8422,
+    "summac": 0.0201,
+    "minicheck_mean_prob": 0.4913,
+    "minicheck_supported_ratio": 0.4444,
+    "minicheck_num_claims": 9,
+    "minicheck_sentence_scores": [
+      {
+        "sentence": "The Welsh Government's draft curriculum has received broad support but some stakeholders requested simplification and added depth.",
+        "label": 0,
+        "prob": 0.1853
+      },
+      {
+        "sentence": "While minor changes will be made, its overall concept remains unchanged, with key steps including workshops with subject specialists and publication by January 2020.",
+        "label": 0,
+        "prob": 0.1912
+      },
+      {
+        "sentence": "The \"what matters\" statements will be refined from existing feedback to ensure consistency across schools.",
+        "label": 1,
+        "prob": 0.9126
+      },
+      {
+        "sentence": "Mental health and well-being are mandatory topics, with specific wording in subordinate legislation.",
+        "label": 0,
+        "prob": 0.3067
+      },
+      {
+        "sentence": "The curriculum aims to empower teachers to deliver lessons that are engaging and relevant, emphasizing the importance of four enabling purposes: strong leadership, excellent teaching, assessment, and accountability.",
+        "label": 1,
+        "prob": 0.7079
+      },
+      {
+        "sentence": "An accountability regime is being developed to ensure consistency in progression steps across Wales.",
+        "label": 1,
+        "prob": 0.9809
+      },
+      {
+        "sentence": "The Welsh government has invested £24 million in supporting teachers with professional learning for curriculum implementation, with a national approach focusing on headteachers assessing individual practitioner needs.",
+        "label": 1,
+        "prob": 0.7938
+      },
+      {
+        "sentence": "The pioneer schools have reported on implementing the curriculum in practice, drawing out themes and issues, while other schools participate through clusters and networks.",
+        "label": 0,
+        "prob": 0.0852
+      },
+      {
+        "sentence": "A statutory framework will ensure consistency, and a national conversation on qualification reform will begin in November to define qualifications rather than vice versa.",
+        "label": 0,
+        "prob": 0.2578
+      }
+    ],
+    "summary_words": 186
+  }
+}
