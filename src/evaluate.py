@@ -45,6 +45,45 @@ def parse_args() -> argparse.Namespace:
     return p.parse_args()
 
 
+# ── QAFactEval ────────────────────────────────────────────────────────────────
+QAFACTEVAL_MAX_SOURCE_WORDS = 3000
+
+
+def load_qafacteval():
+    from qafacteval import QAFactEval
+
+    model_folder = str(PROJECT_ROOT / "qafacteval_models")
+    print("  Loading QAFactEval...")
+    t0 = time.time()
+    metric = QAFactEval(
+        lerc_quip_path=f"{model_folder}/quip-512-mocha",
+        generation_model_path=f"{model_folder}/generation/model.tar.gz",
+        answering_model_dir=f"{model_folder}/answering",
+        lerc_model_path=f"{model_folder}/lerc/model.tar.gz",
+        lerc_pretrained_model_path=f"{model_folder}/lerc/pretraining.tar.gz",
+        cuda_device=-1,
+        use_lerc_quip=True,
+        verbose=False,
+        generation_batch_size=8,
+        answering_batch_size=8,
+        lerc_batch_size=4,
+    )
+    print(f"  QAFactEval loaded in {time.time() - t0:.1f}s")
+    return metric
+
+
+def score_qafacteval(metric, summary: str, source: str) -> dict:
+    words = source.split()
+    truncated = len(words) > QAFACTEVAL_MAX_SOURCE_WORDS
+    if truncated:
+        source = " ".join(words[:QAFACTEVAL_MAX_SOURCE_WORDS])
+    out = metric.score_batch_qafacteval([source], [[summary]], return_qa_pairs=True)
+    return {
+        "qafacteval_score": round(float(out[0][0]["qa-eval"]["lerc_quip"]), 4),
+        "qafacteval_source_truncated": truncated,
+    }
+
+
 # ── AlignScore-large ──────────────────────────────────────────────────────────
 def load_alignscore():
     from alignscore import AlignScore
