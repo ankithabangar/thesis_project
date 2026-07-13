@@ -299,7 +299,9 @@
     "bertscore_precision": 0.7796,
     "bertscore_recall": 0.8347,
     "bertscore_f1": 0.8062,
-    "summary_words": 712
+    "summary_words": 712,
+    "qafacteval_score": 0.5429,
+    "qafacteval_source_truncated": true
   },
   "education_1": {
     "alignscore": 0.7074,
@@ -313,6 +315,8 @@
     "bertscore_precision": 0.8371,
     "bertscore_recall": 0.8632,
     "bertscore_f1": 0.85,
-    "summary_words": 305
+    "summary_words": 305,
+    "qafacteval_score": 1.7757,
+    "qafacteval_source_truncated": true
   }
 }

@@ -11,7 +11,9 @@
     "bertscore_precision": 0.8349,
     "bertscore_recall": 0.8843,
     "bertscore_f1": 0.8589,
-    "summary_words": 207
+    "summary_words": 207,
+    "qafacteval_score": 0.8714,
+    "qafacteval_source_truncated": true
   },
   "Bed004": {
     "alignscore": 0.8598,
@@ -25,7 +27,9 @@
     "bertscore_precision": 0.8364,
     "bertscore_recall": 0.8582,
     "bertscore_f1": 0.8472,
-    "summary_words": 162
+    "summary_words": 162,
+    "qafacteval_score": 0.7779,
+    "qafacteval_source_truncated": true
   },
   "Bed005": {
     "alignscore": 0.8001,
@@ -39,7 +43,9 @@
     "bertscore_precision": 0.8111,
     "bertscore_recall": 0.8479,
     "bertscore_f1": 0.8291,
-    "summary_words": 257
+    "summary_words": 257,
+    "qafacteval_score": 0.6095,
+    "qafacteval_source_truncated": true
   },
   "Bed006": {
     "alignscore": 0.7397,
@@ -53,7 +59,9 @@
     "bertscore_precision": 0.8337,
     "bertscore_recall": 0.8608,
     "bertscore_f1": 0.847,
-    "summary_words": 185
+    "summary_words": 185,
+    "qafacteval_score": 0.8219,
+    "qafacteval_source_truncated": true
   },
   "Bed009": {
     "alignscore": 0.5376,
@@ -67,7 +75,9 @@
     "bertscore_precision": 0.8384,
     "bertscore_recall": 0.8919,
     "bertscore_f1": 0.8643,
-    "summary_words": 182
+    "summary_words": 182,
+    "qafacteval_score": 0.9878,
+    "qafacteval_source_truncated": true
   },
   "Bed011": {
     "alignscore": 0.4479,
@@ -81,7 +91,9 @@
     "bertscore_precision": 0.8449,
     "bertscore_recall": 0.8607,
     "bertscore_f1": 0.8527,
-    "summary_words": 180
+    "summary_words": 180,
+    "qafacteval_score": 0.0946,
+    "qafacteval_source_truncated": true
   },
   "ES2008c": {
     "alignscore": 0.8933,
@@ -95,7 +107,9 @@
     "bertscore_precision": 0.8276,
     "bertscore_recall": 0.8647,
     "bertscore_f1": 0.8458,
-    "summary_words": 222
+    "summary_words": 222,
+    "qafacteval_score": 0.7389,
+    "qafacteval_source_truncated": true
   },
   "ES2008d": {
     "alignscore": 0.6978,
@@ -109,7 +123,9 @@
     "bertscore_precision": 0.8329,
     "bertscore_recall": 0.8806,
     "bertscore_f1": 0.8561,
-    "summary_words": 245
+    "summary_words": 245,
+    "qafacteval_score": 0.9006,
+    "qafacteval_source_truncated": true
   },
   "ES2010a": {
     "alignscore": 0.8337,
@@ -123,7 +139,9 @@
     "bertscore_precision": 0.8533,
     "bertscore_recall": 0.881,
     "bertscore_f1": 0.8669,
-    "summary_words": 144
+    "summary_words": 144,
+    "qafacteval_score": 1.6757,
+    "qafacteval_source_truncated": false
   },
   "ES2010b": {
     "alignscore": 0.7103,
@@ -137,7 +155,9 @@
     "bertscore_precision": 0.8488,
     "bertscore_recall": 0.875,
     "bertscore_f1": 0.8617,
-    "summary_words": 198
+    "summary_words": 198,
+    "qafacteval_score": 0.8938,
+    "qafacteval_source_truncated": true
   },
   "ES2010c": {
     "alignscore": 0.8065,
@@ -151,7 +171,9 @@
     "bertscore_precision": 0.8536,
     "bertscore_recall": 0.8774,
     "bertscore_f1": 0.8653,
-    "summary_words": 225
+    "summary_words": 225,
+    "qafacteval_score": 0.8056,
+    "qafacteval_source_truncated": true
   },
   "ES2010d": {
     "alignscore": 0.7477,
@@ -165,7 +187,9 @@
     "bertscore_precision": 0.8308,
     "bertscore_recall": 0.8706,
     "bertscore_f1": 0.8502,
-    "summary_words": 179
+    "summary_words": 179,
+    "qafacteval_score": 0.9765,
+    "qafacteval_source_truncated": true
   },
   "covid_0": {
     "alignscore": 0.6012,
@@ -179,7 +203,9 @@
     "bertscore_precision": 0.7807,
     "bertscore_recall": 0.8305,
     "bertscore_f1": 0.8049,
-    "summary_words": 405
+    "summary_words": 405,
+    "qafacteval_score": 1.2358,
+    "qafacteval_source_truncated": true
   },
   "covid_1": {
     "alignscore": 0.7298,
@@ -193,7 +219,9 @@
     "bertscore_precision": 0.8039,
     "bertscore_recall": 0.8562,
     "bertscore_f1": 0.8292,
-    "summary_words": 190
+    "summary_words": 190,
+    "qafacteval_score": 0.8426,
+    "qafacteval_source_truncated": true
   },
   "covid_10": {
     "alignscore": 0.5176,
@@ -207,7 +235,9 @@
     "bertscore_precision": 0.8402,
     "bertscore_recall": 0.8586,
     "bertscore_f1": 0.8493,
-    "summary_words": 142
+    "summary_words": 142,
+    "qafacteval_score": 1.3109,
+    "qafacteval_source_truncated": true
   },
   "covid_3": {
     "alignscore": 0.2654,
@@ -221,7 +251,9 @@
     "bertscore_precision": 0.8441,
     "bertscore_recall": 0.88,
     "bertscore_f1": 0.8617,
-    "summary_words": 190
+    "summary_words": 190,
+    "qafacteval_score": 0.4409,
+    "qafacteval_source_truncated": true
   },
   "covid_5": {
     "alignscore": 0.7203,
@@ -235,7 +267,9 @@
     "bertscore_precision": 0.824,
     "bertscore_recall": 0.862,
     "bertscore_f1": 0.8426,
-    "summary_words": 486
+    "summary_words": 486,
+    "qafacteval_score": 0.6828,
+    "qafacteval_source_truncated": true
   },
   "covid_7": {
     "alignscore": 0.7241,
@@ -249,7 +283,9 @@
     "bertscore_precision": 0.7819,
     "bertscore_recall": 0.8434,
     "bertscore_f1": 0.8115,
-    "summary_words": 824
+    "summary_words": 824,
+    "qafacteval_score": 0.5212,
+    "qafacteval_source_truncated": true
   },
   "covid_8": {
     "alignscore": 0.5985,
@@ -263,7 +299,9 @@
     "bertscore_precision": 0.8044,
     "bertscore_recall": 0.8382,
     "bertscore_f1": 0.8209,
-    "summary_words": 191
+    "summary_words": 191,
+    "qafacteval_score": 1.017,
+    "qafacteval_source_truncated": true
   },
   "education_1": {
     "alignscore": 0.6913,
@@ -277,6 +315,8 @@
     "bertscore_precision": 0.8527,
     "bertscore_recall": 0.8645,
     "bertscore_f1": 0.8586,
-    "summary_words": 187
+    "summary_words": 187,
+    "qafacteval_score": 2.1952,
+    "qafacteval_source_truncated": true
   }
 }
